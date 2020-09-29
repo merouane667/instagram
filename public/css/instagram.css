@@ -1,0 +1,54 @@
+.div_profile
+{
+
+    display:inline-block;
+    width:28%;height:300px;
+    margin-left:200px;
+    border:solid rgb(192, 182, 182) 1px;
+    border-radius:3px;
+    position:fixed;
+    background-color: white;
+
+}
+.post 
+{
+
+    border:solid rgb(192, 182, 182) 1px;
+    border-radius:3px;
+    background-color: white;
+
+}
+.div_profile > p{
+    display: inline;
+    margin-left: 110px;
+    padding: 0;
+}
+a{
+    text-decoration: none !important;
+    color: black;
+}
+.delete
+{
+    color:red;
+}
+
+
+#heart {
+ font-size: 1.8em!important;
+}
+#comment{
+    font-size: 1.6em!important;
+    margin: 0 0 0 50px;
+}
+.navbar{
+    position: fixed;
+    top:0;
+    width: 100%;
+    z-index: 1;
+}
+
+#like-comment{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}

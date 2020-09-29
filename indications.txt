@@ -1,0 +1,100 @@
+table like : id_user, is_post,like(boolean)
+
+
+
+function submit(){
+    forms.forEach(form => {
+        form.addEventListener('submit' ,fuction(e){
+        submit();
+    
+        });
+    })
+    
+}
+
+
+function submit(){
+    forms.forEach(form => {
+        form.addEventListener('submit' ,fuction(e){
+            submit()
+    
+        });
+    })
+    
+}
+
+
+
+
+                    <form action="{{ route('posts.like') }}" id="form-js">
+                        <div id="count-js">{{ $post->likes->count() }} Like(s)</div>
+                        <input type="hidden" id="post-id-js" value="{{ $post->id }}">
+
+                        <div class='body'>
+                        <div class="heart" onclick="submit()"></div>
+                        <div class="animation-heart" onclick="submit()"></div>
+                        <button type="submit" class="btn btn-link btn-sm">J'aime</button>
+                        <i class="fa fa-comment-o  ml-4 mb-2" style="font-size:1.5em "></i>
+                        <i class="fa fa-location-arrow ml-4 mb-2" style="font-size:1.5em "></i>
+                        </div>
+                    </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+
+
+
+
+                    //*****************like_animation*********************
+const heart = document.querySelectorAll('.heart');
+const animationHeart = document.querySelectorAll('.animation-heart');
+//
+const forms = document.querySelectorAll('.like')
+
+for(let i=0 ; i < heart.length ; i++){
+   heart[i].addEventListener('click' , () => {
+   animationHeart[i].classList.add('animation');
+   
+
+});
+}
+
+for(let i=0 ; i < animationHeart.length ; i++){
+      animationHeart[i].addEventListener('click' , ()=>{
+      animationHeart[i].classList.remove('animation');
+
+});
+}
+console.log(heart.length);
+
+for(let i = 0 ; i<forms.length ; i++){
+
+    function submit(){
+ 
+          forms[i].submit();
+          console.log(forms[i]);
+          
+        }
+
+    }
+
+forms.forEach(form => {
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    console.log('formulaire clicke');
+
+  });
+
+});
+
